@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chris3DPrintsStuff - 3D Print Cost Estimator</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="logo.png" type="image/jpeg">
+    <link rel="icon" href="logo.jpg" type="image/jpeg">
 </head>
 <body>
     <div class="container">
@@ -33,10 +33,14 @@
             <div class="form-group">
                 <label>Print Time:</label>
                 <div class="input-row">
-                    <input type="number" id="print-time-hours" value="0" min="0" required>
-                    <span>Hours</span>
-                    <input type="number" id="print-time-minutes" value="0" min="0" max="59" required>
-                    <span>Minutes</span>
+                    <div class="time-field">
+                        <input type="number" id="print-time-hours" value="0" min="0" required>
+                        <span>Hours</span>
+                    </div>
+                    <div class="time-field">
+                        <input type="number" id="print-time-minutes" value="0" min="0" max="59" required>
+                        <span>Minutes</span>
+                    </div>
                 </div>
             </div>
             <div class="form-group">
@@ -50,10 +54,14 @@
             <div class="form-group">
                 <label>Labor Time:</label>
                 <div class="input-row">
-                    <input type="number" id="labor-time-hours" value="0" min="0" required>
-                    <span>Hours</span>
-                    <input type="number" id="labor-time-minutes" value="0" min="0" max="59" required>
-                    <span>Minutes</span>
+                    <div class="time-field">
+                        <input type="number" id="labor-time-hours" value="0" min="0" required>
+                        <span>Hours</span>
+                    </div>
+                    <div class="time-field">
+                        <input type="number" id="labor-time-minutes" value="0" min="0" max="59" required>
+                        <span>Minutes</span>
+                    </div>
                 </div>
             </div>
             <div class="form-group">
@@ -66,7 +74,7 @@
             </div>
         </form>
         <div id="results">
-            <h2>Estimated Price</h2>
+            <h2>Estimated Cost</h2>
             <p id="material-cost">Material Cost: £0.00</p>
             <p id="labor-cost-display">Labor Cost: £0.00</p>
             <p id="energy-cost">Energy Cost: £0.00</p>

@@ -4,7 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
 }
 
@@ -16,6 +16,7 @@ body {
     width: 100%;
     max-width: 500px;
     text-align: center;
+    box-sizing: border-box; /* Ensures padding doesn't add to width */
 }
 
 h1 {
@@ -59,8 +60,17 @@ input[type="number"], select {
 
 .input-row {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap; /* Allows fields to wrap to the next line */
     gap: 10px;
+    align-items: center;
+}
+
+.time-field {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex: 1; /* Allows each time-field to grow and share space */
+    min-width: 120px; /* Prevents fields from getting too small */
 }
 
 .input-row input {
@@ -100,29 +110,29 @@ button:hover {
     color: #28a745;
 }
 
-/* New CSS for dynamic material rows */
-.material-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
-}
+/* Media Query for Mobile Phones */
+@media (max-width: 500px) {
+    .container {
+        padding: 20px; /* Reduced padding for smaller screens */
+    }
 
-.material-row .material-select,
-.material-row .material-weight {
-    flex: 1;
-}
+    h1 {
+        flex-direction: column; /* Stack logo and title vertically */
+        text-align: center;
+        gap: 0;
+    }
 
-.material-row .remove-button {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-    padding: 8px 12px;
-    font-size: 1em;
-}
+    .header-content {
+        text-align: center;
+        margin-top: 10px;
+    }
 
-.material-row .remove-button:hover {
-    background-color: #c82333;
+    .time-field {
+        min-width: unset;
+        flex: 1 1 45%; /* Makes fields more flexible on small screens */
+    }
+
+    .input-row {
+        justify-content: center; /* Center the input fields */
+    }
 }
