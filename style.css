@@ -3,9 +3,11 @@ body {
     background-color: #f4f4f4;
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    align-items: flex-start; 
+    min-height: 100vh; 
     margin: 0;
+    padding: 20px 0; 
+    box-sizing: border-box; 
 }
 
 .container {
@@ -16,7 +18,8 @@ body {
     width: 100%;
     max-width: 500px;
     text-align: center;
-    box-sizing: border-box; /* Ensures padding doesn't add to width */
+    box-sizing: border-box;
+    margin: 0 auto; 
 }
 
 h1 {
@@ -31,10 +34,12 @@ h1 {
 .logo {
     width: 100px;
     height: auto;
+    flex-shrink: 0; 
 }
 
 .header-content {
     text-align: left;
+    min-width: 0; 
 }
 
 .form-group {
@@ -60,7 +65,7 @@ input[type="number"], select {
 
 .input-row {
     display: flex;
-    flex-wrap: wrap; /* Allows fields to wrap to the next line */
+    flex-wrap: wrap;
     gap: 10px;
     align-items: center;
 }
@@ -69,18 +74,20 @@ input[type="number"], select {
     display: flex;
     align-items: center;
     gap: 5px;
-    flex: 1; /* Allows each time-field to grow and share space */
-    min-width: 120px; /* Prevents fields from getting too small */
+    flex: 1;
+    min-width: 120px;
 }
 
 .input-row input {
     flex-grow: 1;
+    min-width: 0; 
 }
 
 .input-row span {
     white-space: nowrap;
     font-size: 0.9em;
     color: #555;
+    flex-shrink: 0; 
 }
 
 button {
@@ -112,27 +119,49 @@ button:hover {
 
 /* Media Query for Mobile Phones */
 @media (max-width: 500px) {
+    body {
+        padding: 10px 0; 
+    }
+
     .container {
-        padding: 20px; /* Reduced padding for smaller screens */
+        width: 90%; 
+        margin: 20px auto; 
+        padding: 15px; 
     }
 
     h1 {
-        flex-direction: column; /* Stack logo and title vertically */
+        flex-direction: column; 
         text-align: center;
-        gap: 0;
+        gap: 5px; 
+        margin-bottom: 15px; 
+    }
+
+    .logo {
+        width: 80px; 
+        margin: 0 auto; 
     }
 
     .header-content {
         text-align: center;
-        margin-top: 10px;
+        margin-top: 5px; 
+        font-size: 0.9em; 
     }
 
     .time-field {
+        flex-basis: calc(50% - 5px); 
         min-width: unset;
-        flex: 1 1 45%; /* Makes fields more flexible on small screens */
     }
 
     .input-row {
-        justify-content: center; /* Center the input fields */
+        justify-content: space-between; 
+    }
+}
+
+@media (max-width: 320px) {
+    .header-content {
+        font-size: 0.8em;
+    }
+    #total-cost {
+        font-size: 1.5em;
     }
 }
