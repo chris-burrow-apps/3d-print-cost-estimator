@@ -28,8 +28,8 @@ h1 {
 }
 
 .logo {
-    width: 100px; /* Updated width */
-    height: auto; /* Ensures aspect ratio is maintained */
+    width: 100px;
+    height: auto;
 }
 
 .header-content {
@@ -98,4 +98,31 @@ button:hover {
     font-size: 2em;
     font-weight: bold;
     color: #28a745;
+}
+
+/* New CSS for dynamic material rows */
+.material-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.material-row .material-select,
+.material-row .material-weight {
+    flex: 1;
+}
+
+.material-row .remove-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 1em;
+}
+
+.material-row .remove-button:hover {
+    background-color: #c82333;
 }

@@ -30,7 +30,6 @@
                 <label for="spool-weight-grams">Spool Weight (grams):</label>
                 <input type="number" id="spool-weight-grams" value="0" step="1" min="0" required>
             </div>
-
             <div class="form-group">
                 <label>Print Time:</label>
                 <div class="input-row">
@@ -40,7 +39,6 @@
                     <span>Minutes</span>
                 </div>
             </div>
-
             <div class="form-group">
                 <label for="material-weight">Material Weight (grams):</label>
                 <input type="number" id="material-weight" step="1" min="0" required>
@@ -49,7 +47,6 @@
                 <label for="labor-cost">Labor Cost (£ per hour):</label>
                 <input type="number" id="labor-cost" step="1" min="0" required>
             </div>
-
             <div class="form-group">
                 <label>Labor Time:</label>
                 <div class="input-row">
@@ -59,7 +56,6 @@
                     <span>Minutes</span>
                 </div>
             </div>
-
             <div class="form-group">
                 <label for="electricity-cost-kwh">Electricity Cost (£ per kWh):</label>
                 <input type="number" id="electricity-cost-kwh" step="0.01" min="0" required>
@@ -70,8 +66,11 @@
             </div>
         </form>
         <div id="results">
-            <h2>Estimated Cost:</h2>
-            <p id="total-cost">£0.00</p>
+            <h2>Estimated Price</h2>
+            <p id="material-cost">Material Cost: £0.00</p>
+            <p id="labor-cost-display">Labor Cost: £0.00</p>
+            <p id="energy-cost">Energy Cost: £0.00</p>
+            <p id="total-cost">Total: £0.00</p>
         </div>
     </div>
     <script src="script.js"></script>

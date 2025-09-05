@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const totalCostDisplay = document.getElementById('total-cost');
+    const materialCostDisplay = document.getElementById('material-cost');
+    const laborCostDisplay = document.getElementById('labor-cost-display');
+    const energyCostDisplay = document.getElementById('energy-cost');
     const materialSpoolSelect = document.getElementById('material-spool');
 
     // A variable to store the markup value
@@ -98,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const printHours = parseFloat(document.getElementById('print-time-hours').value) || 0;
         const printMinutes = parseFloat(document.getElementById('print-time-minutes').value) || 0;
         const printTimeHours = printHours + (printMinutes / 60);
-
+        
         const materialWeightGrams = parseFloat(document.getElementById('material-weight').value) || 0;
         const laborCostPerHour = parseFloat(document.getElementById('labor-cost').value) || 0;
 
@@ -117,7 +120,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const markupAmount = baseCost * (markupPercentage / 100);
         const totalCost = baseCost + markupAmount;
 
-        totalCostDisplay.textContent = `£${totalCost.toFixed(2)}`;
+        // Display the individual costs and the total cost
+        materialCostDisplay.textContent = `Material Cost: £${materialCost.toFixed(2)}`;
+        laborCostDisplay.textContent = `Labor Cost: £${laborCost.toFixed(2)}`;
+        energyCostDisplay.textContent = `Energy Cost: £${electricityCost.toFixed(2)}`;
+        totalCostDisplay.textContent = `Total: £${totalCost.toFixed(2)}`;
     }
 
     // Start the application
