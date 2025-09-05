@@ -1,0 +1,49 @@
+{
+  "spoolTypes": [
+    {
+      "name": "JAYO Matt PETG",
+      "cost": 12,
+      "weight": 1100
+    }, 
+    {
+      "name": "JAYO PLA",
+      "cost": 11,
+      "weight": 1100
+    },
+    {
+      "name": "Elegoo PETG",
+      "cost": 12,
+      "weight": 1000
+    }, 
+    {
+      "name": "Elegoo PLA",
+      "cost": 11,
+      "weight": 1000
+    },
+    {
+      "name": "Creality Hyper PETG",
+      "cost": 20,
+      "weight": 1000
+    },     
+    {
+      "name": "Creality Hyper PLA",
+      "cost": 16,
+      "weight": 1000
+    }
+  ],
+  "defaultValues": {
+    "printTime": {
+      "hours": 2,
+      "minutes": 0
+    },
+    "materialWeight": 200,
+    "laborCost": 12.50,
+    "laborTime": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "electricityCost": 0.30,
+    "powerConsumption": 300,
+    "markup": 10
+  }
+}
