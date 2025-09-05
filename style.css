@@ -3,11 +3,10 @@ body {
     background-color: #f4f4f4;
     display: flex;
     justify-content: center;
-    align-items: flex-start; 
-    min-height: 100vh; 
+    align-items: center;
+    min-height: 100vh;
     margin: 0;
-    padding: 20px 0; 
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 .container {
@@ -17,9 +16,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 500px;
-    text-align: center;
     box-sizing: border-box;
-    margin: 0 auto; 
 }
 
 h1 {
@@ -28,18 +25,21 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
     gap: 10px;
 }
 
 .logo {
     width: 100px;
+    max-width: 100%;
     height: auto;
-    flex-shrink: 0; 
+    flex-shrink: 0;
 }
 
 .header-content {
+    flex-grow: 1;
     text-align: left;
-    min-width: 0; 
 }
 
 .form-group {
@@ -74,20 +74,18 @@ input[type="number"], select {
     display: flex;
     align-items: center;
     gap: 5px;
-    flex: 1;
+    flex: 1 1 calc(50% - 5px);
     min-width: 120px;
 }
 
 .input-row input {
     flex-grow: 1;
-    min-width: 0; 
 }
 
 .input-row span {
     white-space: nowrap;
     font-size: 0.9em;
     color: #555;
-    flex-shrink: 0; 
 }
 
 button {
@@ -109,59 +107,27 @@ button:hover {
     margin-top: 20px;
     padding-top: 15px;
     border-top: 2px solid #eee;
+    text-align: center;
 }
 
 #total-cost {
     font-size: 2em;
     font-weight: bold;
     color: #28a745;
+    text-align: center;
 }
 
-/* Media Query for Mobile Phones */
-@media (max-width: 500px) {
-    body {
-        padding: 10px 0; 
-    }
+@media (max-width: 450px) {
+  .container {
+    padding: 15px;
+  }
 
-    .container {
-        width: 90%; 
-        margin: 20px auto; 
-        padding: 15px; 
-    }
+  h1 {
+    flex-direction: column;
+    gap: 5px;
+  }
 
-    h1 {
-        flex-direction: column; 
-        text-align: center;
-        gap: 5px; 
-        margin-bottom: 15px; 
-    }
-
-    .logo {
-        width: 80px; 
-        margin: 0 auto; 
-    }
-
-    .header-content {
-        text-align: center;
-        margin-top: 5px; 
-        font-size: 0.9em; 
-    }
-
-    .time-field {
-        flex-basis: calc(50% - 5px); 
-        min-width: unset;
-    }
-
-    .input-row {
-        justify-content: space-between; 
-    }
-}
-
-@media (max-width: 320px) {
-    .header-content {
-        font-size: 0.8em;
-    }
-    #total-cost {
-        font-size: 1.5em;
-    }
+  .header-content {
+    text-align: center;
+  }
 }
