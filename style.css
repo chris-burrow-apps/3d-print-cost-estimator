@@ -38,8 +38,9 @@ h1 {
 }
 
 .header-content {
+    padding-top: 8px;
     flex-grow: 1;
-    text-align: left;
+    text-align: center;
 }
 
 .form-group {
@@ -125,9 +126,5 @@ button:hover {
   h1 {
     flex-direction: column;
     gap: 5px;
-  }
-
-  .header-content {
-    text-align: center;
   }
 }
